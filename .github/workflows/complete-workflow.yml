@@ -35,9 +35,9 @@ jobs:
     name: Run DAST scan on the web application #shown on workflow summary
     steps:
       - name: Checkout
-        uses: actions/checkout@v2 #This is an action that checks out your repository onto the runner, allowing you to run scripts or other actions against your code
+        uses: actions/checkout@v4 #This is an action that checks out your repository onto the runner, allowing you to run scripts or other actions against your code
         with:
-          ref: master
+          ref: main
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.6.1
         with:
